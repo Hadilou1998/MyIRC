@@ -1,4 +1,4 @@
-/*CREATE TABLE room (
+CREATE TABLE room (
   id int NOT NULL AUTO_INCREMENT,
   name varchar(79) NOT NULL,
    PRIMARY KEY (id)
@@ -11,11 +11,9 @@ CREATE TABLE users (
   name varchar(79) NOT NULL,
   password varchar(79) NOT NULL,
   id_room int NOT NULL,
-  PRIMARY KEY (id),
-   FOREIGN KEY (id_room) REFERENCES room(id)
-
-);*/
-
+  CONSTRAINT pk_users PRIMARY KEY (id),
+  CONSTRAINT fk_users_room FOREIGN KEY (id_room) REFERENCES room(id)
+);
 INSERT INTO room VALUES
 (NULL, "jeux"   ),
 (NULL, "sport"  ),
