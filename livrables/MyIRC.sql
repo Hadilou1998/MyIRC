@@ -1,12 +1,10 @@
 CREATE TABLE room (
   id int NOT NULL AUTO_INCREMENT,
   name varchar(79) NOT NULL,
-   PRIMARY KEY (id)
+  PRIMARY KEY (id)
 );
 
-
 CREATE TABLE users (
-
   id int NOT NULL AUTO_INCREMENT,
   name varchar(79) NOT NULL,
   password varchar(79) NOT NULL,
@@ -14,6 +12,7 @@ CREATE TABLE users (
   CONSTRAINT pk_users PRIMARY KEY (id),
   CONSTRAINT fk_users_room FOREIGN KEY (id_room) REFERENCES room(id)
 );
+
 INSERT INTO room VALUES
 (NULL, "jeux"   ),
 (NULL, "sport"  ),
@@ -26,5 +25,5 @@ INSERT INTO users VALUES
 (NULL , "dounia"    , "dounia_chelou"     , 2),
 (NULL , "eliot"     , "eliot_chelou"      , 3),
 (NULL , "fouad"     , "fouad_chelou"      , 3),
-(NULL , "garou"     , "garou_chelou"      , 4),
-(NULL , "hadil"     , "hadil_chelou"      , 4);
+(NULL , "garou"     , "garou_chelou"      , 1),
+(NULL , "hadil"     , "hadil_chelou"      , 1);
